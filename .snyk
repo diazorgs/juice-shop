@@ -1,0 +1,116 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-MARSDB-480405:
+    - '*':
+        reason: >-
+          Belum ada versi marsdb yang diperbaiki. Dipakai sengaja untuk
+          tantangan NoSQL injection di Juice Shop. Mitigasi: input tidak
+          dipercaya tidak boleh masuk ke query marsdb di produksi.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:34:24.974Z
+  SNYK-JS-EXPRESSJWT-575022:
+    - '*':
+        reason: >-
+          Transitif dari express-jwt@0.1.3 yang dipin sengaja untuk tantangan
+          JWT Juice Shop. Upgrade ke express-jwt 6+ mengubah API dan merusak
+          tantangan. Rencana: migrasi ke express-jwt 8 di fork produksi.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:34:29.383Z
+  'npm:jws:20160726':
+    - '*':
+        reason: >-
+          Transitif dari express-jwt@0.1.3 yang dipin sengaja untuk tantangan
+          JWT Juice Shop. Upgrade ke express-jwt 6+ mengubah API dan merusak
+          tantangan. Rencana: migrasi ke express-jwt 8 di fork produksi.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:34:34.088Z
+  SNYK-JS-JWS-14188253:
+    - '*':
+        reason: >-
+          Transitif dari express-jwt@0.1.3 yang dipin sengaja untuk tantangan
+          JWT Juice Shop. Upgrade ke express-jwt 6+ mengubah API dan merusak
+          tantangan. Rencana: migrasi ke express-jwt 8 di fork produksi.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:34:38.607Z
+  SNYK-JS-MOMENT-19821607:
+    - '*':
+        reason: >-
+          Transitif dari express-jwt@0.1.3 yang dipin sengaja untuk tantangan
+          JWT Juice Shop. Upgrade ke express-jwt 6+ mengubah API dan merusak
+          tantangan. Rencana: migrasi ke express-jwt 8 di fork produksi.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:34:42.974Z
+  SNYK-JS-MOMENT-2440688:
+    - '*':
+        reason: >-
+          Transitif dari express-jwt@0.1.3 yang dipin sengaja untuk tantangan
+          JWT Juice Shop. Upgrade ke express-jwt 6+ mengubah API dan merusak
+          tantangan. Rencana: migrasi ke express-jwt 8 di fork produksi.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:34:47.918Z
+  'npm:base64url:20180511':
+    - '*':
+        reason: >-
+          Transitif dari express-jwt@0.1.3 yang dipin sengaja untuk tantangan
+          JWT Juice Shop. Upgrade ke express-jwt 6+ mengubah API dan merusak
+          tantangan. Rencana: migrasi ke express-jwt 8 di fork produksi.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:34:52.480Z
+  'npm:jsonwebtoken:20150331':
+    - '*':
+        reason: >-
+          jsonwebtoken@0.4.0 dipin sengaja untuk tantangan forged JWT (alg none)
+          di Juice Shop. Upgrade ke 9.x mengubah API sign/verify.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:34:56.822Z
+  SNYK-JS-LODASH-15869625:
+    - '*':
+        reason: >-
+          Transitif dari sanitize-html@1.4.2 (dipin untuk tantangan XSS).
+          Override ke lodash 4 merusak sanitize-html karena fungsi _.contains
+          sudah dihapus di lodash 4.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:35:01.195Z
+  SNYK-JS-LODASH-6139239:
+    - '*':
+        reason: >-
+          Transitif dari sanitize-html@1.4.2 (dipin untuk tantangan XSS).
+          Override ke lodash 4 merusak sanitize-html karena fungsi _.contains
+          sudah dihapus di lodash 4.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:35:05.833Z
+  SNYK-JS-LODASH-450202:
+    - '*':
+        reason: >-
+          Transitif dari sanitize-html@1.4.2 (dipin untuk tantangan XSS).
+          Override ke lodash 4 merusak sanitize-html karena fungsi _.contains
+          sudah dihapus di lodash 4.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:35:10.232Z
+  SNYK-JS-LODASH-608086:
+    - '*':
+        reason: >-
+          Transitif dari sanitize-html@1.4.2 (dipin untuk tantangan XSS).
+          Override ke lodash 4 merusak sanitize-html karena fungsi _.contains
+          sudah dihapus di lodash 4.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:35:14.855Z
+  SNYK-JS-LODASH-73638:
+    - '*':
+        reason: >-
+          Transitif dari sanitize-html@1.4.2 (dipin untuk tantangan XSS).
+          Override ke lodash 4 merusak sanitize-html karena fungsi _.contains
+          sudah dihapus di lodash 4.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:35:19.395Z
+  SNYK-JS-LODASH-1040724:
+    - '*':
+        reason: >-
+          Transitif dari sanitize-html@1.4.2 (dipin untuk tantangan XSS).
+          Override ke lodash 4 merusak sanitize-html karena fungsi _.contains
+          sudah dihapus di lodash 4.
+        expires: 2027-05-09T00:00:00.000Z
+        created: 2026-11-09T15:35:23.796Z
+patch: {}
