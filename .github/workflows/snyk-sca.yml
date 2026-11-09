@@ -7,11 +7,16 @@ on:
     branches: [master, main]
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   snyk-scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
       - name: Use Node.js
         uses: actions/setup-node@v4
@@ -29,7 +34,7 @@ jobs:
           args: --severity-threshold=high
 
       - name: Snyk Monitor
-        run: npx snyk monitor
+        run: npx snyk@1.1308.4 monitor
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         if: github.ref == 'refs/heads/master' || github.ref == 'refs/heads/main'
